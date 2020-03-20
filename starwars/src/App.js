@@ -5,6 +5,9 @@ import axios from "axios";
 import CharCard from "./components/CharCard";
 import styled from "styled-components";
 import img from "../src/lightspeed.jpg";
+
+//
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -42,6 +45,14 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      <form class="search">
+        <input
+          class="form-control m-auto"
+          type="text"
+          name="search"
+          placeholder="search characters"
+        />
+      </form>
       <div className="box">
         {characters.map(character => {
           return (
@@ -63,3 +74,23 @@ const App = () => {
 };
 
 export default App;
+const list = document.querySelector(".todos");
+const search = document.querySelector(".search input");
+
+const filterTodos = term => {
+  Array.from(list.children)
+    .filter(todo => !todo.textContent.includes(term))
+    .forEach(todo => {
+      todo.classList.add("filtered");
+    });
+  Array.from(list.children)
+    .filter(todo => todo.textContent.includes(term))
+    .forEach(todo => todo.classList.remove("filtered"));
+};
+
+// keyup event
+
+// search.addEventListener("submit", () => {
+//   const term = search.value.trim();
+//   filterTodos(term);
+// });
