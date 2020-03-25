@@ -6,3 +6,23 @@
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Geostar", cursive;
+}
+p {
+  background-color: rgba(255, 255, 255, 0.541);
+  padding: 2%;
+  border-radius: 10px;
+}
+h2 {
+  background-color: rgba(255, 255, 255, 0.541);
+  padding: 2%;
+  border-radius: 10px;
+}
+form {
+  width: 50%;
+  margin: 5% auto;
+}
